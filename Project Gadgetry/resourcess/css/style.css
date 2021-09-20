@@ -1,0 +1,266 @@
+/*--------------------Basic setup------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+/*----------------Reusable----------------------*/
+
+.row {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+.box {
+  padding: 0%;
+}
+
+/*----------------Buttons----------------------*/
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #782cb7;
+  border: 1px solid #782cb7;
+  color: #fff;
+  margin-right: 15px;
+  margin-left: 500px;
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #782cb7;
+  color: #8b8b8b;
+}
+.btn:hover,
+.btn:active {
+  background-color: #6824a0;
+}
+.btn-full:hover,
+.btn-full:active {
+  border: 5px solid #6824a0;
+}
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 5px solid #6824a0;
+  color: #fff;
+}
+
+/*----------------Headings----------------------*/
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #782cb7;
+  content: " ";
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+/*----------------Header----------------------*/
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.658)),
+    url(img/header_img_project1.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+.main-nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 5px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #782cb7;
+}
+
+/*----------------Search Bar----------------------*/
+
+.box-container {
+  float: right;
+  margin-right: 40px;
+  margin-top: 50px;
+  width: auto;
+  height: auto;
+  border: 2px solid #6824a0;
+  padding: 0px 10px;
+  border-radius: 50px;
+}
+.elements-container {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.search {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0px 5px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: rgb(190, 190, 190);
+  font-weight: 500;
+}
+.search:focus {
+  outline: none;
+}
+
+/*----------------Icons----------------------*/
+
+.icon-big {
+  font-size: 160%;
+}
+
+/*----------------Para----------------------*/
+.long-copy {
+  line-height: 145%;
+  width: 65.6%;
+  margin-left: 17.2%;
+  margin-right: 17.2%;
+}
+.box {
+  font-size: 80%;
+  line-height: 140%;
+}
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+/*---------------product section---------------*/
+
+.section-product {
+  padding: 0;
+}
+.product-showcase {
+  list-style: none;
+  width: 100%;
+}
+.product-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+.product-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+.product-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.product-photo img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/*---------------login page---------------
+
+.hero {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(img/login_page.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+
+    .btn1 {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      border-radius: 15%;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .btn1:hover {
+      background-color: #ddd;
+    }
+
+    .btn1.active {
+      background-color: #666;
+      color: white;
+      transition: 5s;
+    }

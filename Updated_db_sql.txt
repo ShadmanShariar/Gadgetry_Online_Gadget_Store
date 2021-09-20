@@ -1,0 +1,150 @@
+CREATE DATABASE gadgetry;
+
+
+CREATE TABLE registration(
+    email varchar(20)NOT NULL,
+    firstName varchar(20),
+    gender ENUM('m','f','o'),NOT NULL,
+    id INT(11)PRIMARY KEY AUTO_INCREMENT,
+    lastName varchar(20)NOT NULL, 
+    number varchar(20)NOT NULL,
+    password varchar(20)NOT NULL,
+    city VARCHAR(20)NOT NULL,
+    roadnumber VARCHAR(20)NOT NULL,
+    housenumber VARCHAR(20)NOT NULL
+);
+
+
+
+CREATE TABLE Shopping_Cart (
+    idShopping_Cart SMALLINT(4)PRIMARY KEY AUTO_INCREMENT,
+    item_Count TINYINT(3)NOT NULL,
+    total_amount DECIMAL(9,2),
+    idUser SMALLINT(4),
+    FOREIGN KEY (idUser) REFERENCES Users(idUser)
+);
+
+
+
+
+
+CREATE TABLE Purchase (
+    id SMALLINT(4)PRIMARY KEY AUTO_INCREMENT,
+    dates DATETIME NOT NULL,
+    idUser SMALLINT(4),
+    FOREIGN KEY (idUser) REFERENCES Users(idUser)
+);
+
+
+
+
+
+CREATE TABLE Payment_Catagory (
+    idPayment_Catagory SMALLINT(4)PRIMARY KEY AUTO_INCREMENT,
+   id_purchase SMALLINT(4) NOT NULL,
+    FOREIGN KEY (id_purchase) REFERENCES Purchase(id)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE Product (
+    idProduct SMALLINT(4)PRIMARY KEY AUTO_INCREMENT,
+    P_name VARCHAR(30) NOT NULL,
+    P_img VARCHAR(30) NOT NULL,
+    Description LONGTEXT ,
+    Price DECIMAL(9,2),
+    Color VARCHAR(10),
+    idCatagory SMALLINT(4),
+    FOREIGN KEY (idCatagory) REFERENCES Catagory(idCatagory)
+);
+
+
+
+
+
+
+
+
+CREATE TABLE Stock (
+    Product_idProduct SMALLINT(4),
+    FOREIGN KEY (Product_idProduct) REFERENCES Product(idProduct),
+    Product_Catagory_id_Catagory SMALLINT(4),
+    FOREIGN KEY (Product_Catagory_id_Catagory) REFERENCES Catagory(idCatagory)
+);
+
+
+CREATE TABLE Bkash (
+    idBkash SMALLINT(4)PRIMARY KEY AUTO_INCREMENT,
+    Bkash_no varchar(14)NOT NULL
+);
+
+
+
+
+
+CREATE TABLE Card (
+    idCard SMALLINT(4)PRIMARY KEY AUTO_INCREMENT,
+    CVC_no VARCHAR(16)NOT NULL,
+    EXP_month TINYINT(2)NOT NULL,
+     EXP_year YEAR(4)NOT NULL,
+    Holder_name VARCHAR(20)NOT NULL
+);
+
+
+
+
+
+ALTER TABLE Purchase
+ADD Shopping_Cart_idShopping_Cart SMALLINT(4);
+
+ALTER TABLE Purchase
+ADD FOREIGN KEY (Shopping_Cart_idShopping_Cart) REFERENCES Shopping_Cart(idShopping_Cart);
+
+
+
+ALTER TABLE Shopping_Cart
+ADD Product_idProduct SMALLINT(4);
+
+ALTER TABLE Shopping_Cart
+ADD FOREIGN KEY (Product_idProduct) REFERENCES Product(idProduct);
+
+
+
+ALTER TABLE Payment_Catagory
+ADD Purchase_Shopping_Cart_idShopping_Cart  SMALLINT(4) NOT NULL;
+
+ALTER TABLE Payment_Catagory
+ADD FOREIGN KEY (Purchase_Shopping_Cart_idShopping_Cart) REFERENCES Shopping_Cart(idShopping_Cart);
+
+
+
+ALTER TABLE Payment_Catagory
+ADD Bkash_idBkash SMALLINT(4);
+
+ALTER TABLE Payment_Catagory
+ADD FOREIGN KEY (Bkash_idBkash) REFERENCES Bkash(idBkash);
+
+ALTER TABLE Payment_Catagory
+ADD Card_idCard SMALLINT(4);
+
+ALTER TABLE Payment_Catagory
+ADD FOREIGN KEY (Card_idCard) REFERENCES Card(idCard);
+
+
+
+
+CREATE TABLE Admin (
+    idAdmin TINYINT(1)PRIMARY KEY AUTO_INCREMENT,
+    name varchar(20)NOT NULL,
+    email varchar(20)NOT NULL,
+    pass varchar(20)NOT NULL
+ );

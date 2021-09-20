@@ -1,0 +1,45 @@
+body{
+    background-color:#8D95F5;
+}
+
+ h1{
+	 color:white;
+	 text-align:center;
+ }
+ 
+ table{
+	 width:350px;
+	 height:200px;
+	 background-color:#00F;
+	 border-radius:20px;
+ }
+ input[type="text"]{
+	 display:block;
+	 width:200px;
+	 hight:30px;
+	 border:3px solid #ED54D6;
+	 margin-top:30px;
+	 margin-left:75px;
+	 font-size:18px;
+ }
+ 
+ input[type="password"]{
+	 display:block;
+	 width:200px;
+	 hight:30px;
+	 border:3px solid #ED54D6;
+	 margin-left:75px;
+	 font-size:18px;
+ }
+ input[type="submit"]{
+	 width:200px;
+	 hight:30px;
+	 color:white;
+	 background-color:#F0F;
+	 margin-bottom:30px;
+	 margin-left:75px;
+	 font-size:18px;
+ }
+ input:focus{
+	 border-color:RED;
+ }

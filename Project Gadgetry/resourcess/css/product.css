@@ -1,0 +1,193 @@
+/*--------------------Basic setup------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+/*----------------Reusable----------------------*/
+
+.row {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+.box {
+  padding: 0%;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.658)),
+    url(img/header_img_project1.png);
+  background-size: cover;
+  background-position: center;
+  height: 20vh;
+}
+
+.main-nav {
+  float: left;
+  list-style: none;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  margin-left: 570px;
+}
+.main-nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 5px 0;
+  color: #fff;
+  text-decoration: none;
+
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #782cb7;
+}
+
+.contact-us .down-contact,
+.contact-us #map {
+  margin-top: 80px;
+}
+
+.contact-us .sidebar-heading h2 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #20232e;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-us .contact-form select,
+.contact-us .contact-form input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #eee;
+  font-size: 13px;
+  font-family: lato;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #7a7a7a;
+  outline: none;
+  padding: 0px 15px;
+  margin-bottom: 30px;
+}
+
+.contact-us .contact-form textarea {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #eee;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #7a7a7a;
+  outline: none;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  height: 180px;
+  max-height: 220px;
+  max-width: 100%;
+  min-width: 160px;
+}
+
+.contact-us .contact-form input::placeholder,
+.contact-us .contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-us .contact-form button {
+  display: inline-block;
+  background-color: #782cb7;
+  color: #fff;
+  font-family: lato;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.contact-us .contact-form button:hover {
+  background-color: #6824a0;
+}
+
+.contact-us .contact-information {
+  margin-left: 30px;
+}
+
+.contact-us .contact-information ul li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-us .contact-information ul li:last-child {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+.contact-us .contact-information ul li h5 {
+  font-size: 19px;
+  font-weight: 900;
+  color: #20232e;
+  line-height: 30px;
+}
+
+.contact-us .contact-information ul li span {
+  display: block;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+.text-content h4 {
+  color: #782cb7;
+  font-family: lato;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.text-content h2 {
+  color: rgb(0, 0, 0);
+  font-family: lato;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
