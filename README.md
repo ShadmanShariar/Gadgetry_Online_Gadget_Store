@@ -1,6 +1,6 @@
 # Online_Gadget_Store
 
-Online Gadget Store, Frontend - HTML &amp; CSS, Backend DB - PHP &amp; MySQL
+This is an online gadget store website, Here people can easily see products, They also can see products details, product pic and product prices, They can Filter products by using their brand name, People can order their products and see their cash memo, Here they can order product by online payment, Frontend - HTML, CSS, JS & Backend - PHP, JS, SQL
 
 ![Screenshot (1746)](https://github.com/ShadmanShariar/Online_Gadget_Store/assets/75669228/16161932-4b5c-4903-a8ae-648462b805fd)
 ![Screenshot (1747)](https://github.com/ShadmanShariar/Online_Gadget_Store/assets/75669228/4ff325f6-f15d-482a-adc0-66debcef5970)
